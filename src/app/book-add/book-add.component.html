@@ -1,0 +1,21 @@
+<h2>Them moi sach</h2>
+<form [formGroup]="bookForm" (ngSubmit)="createBook()">
+  <div> Them sach moi!
+    <table>
+      <tr>
+        <td>Ten</td>
+        <td><input type="text" formControlName="title"></td>
+      </tr>
+      <tr>
+        <td>Author</td>
+        <td><input type="text" formControlName="author"></td>
+      </tr>
+      <tr>
+        <td>Mo ta</td>
+        <td><input type="text" formControlName="description"></td>
+      </tr>
+    </table>
+    <button type="submit">Them sach</button>
+    <a [routerLink]="['/books']" >Back to book list</a>
+  </div>
+</form>

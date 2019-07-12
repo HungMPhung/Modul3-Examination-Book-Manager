@@ -1,0 +1,29 @@
+<h2 class="text-center title">Book List</h2>
+
+<div>
+  Co {{bookList.length}} cuon sach!
+  <a [routerLink]="['/book-add']"> Them moi sach</a>
+</div>
+<div>
+  <table class="table table-bordered table-striped col-md-10 offset-md-1">
+    <thead class="table table-dark">
+    <tr>
+      <th scope="col">Stt</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Option</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of bookList, index as i" >
+      <td>{{i+1}}</td>
+      <td><a [routerLink]="[ '/book/', book.id]">{{book.title}}</a></td>
+      <td>{{book.author}}</td>
+      <td>
+        <a [routerLink]="['/book', book.id,'delete']">Delete</a> |
+        <a [routerLink]="['/book', book.id,'edit']">Edit</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

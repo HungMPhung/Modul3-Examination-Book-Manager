@@ -1,0 +1,18 @@
+<h2>Thong tin sach</h2>
+<a [routerLink]="['/books']" >Back to book list!</a>
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Description</th>
+    </tr></thead>
+    <tbody>
+    <tr >
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.description}}</td>
+    </tr></tbody>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+<h2>Delete Book</h2>
+<div>
+  <table *ngIf="book">
+    <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.description}}</td>
+    </tbody>
+  </table>
+</div>
+<button (click)="deleteBook()">Delete</button>

@@ -1,0 +1,49 @@
+<h2>Cap nhap sach</h2>
+<a [routerLink]="['/books']" >Back to Book list</a>
+<form [formGroup]="bookForm" (ngSubmit)="editBook()">
+<!--  <div> Cap nhap sach!-->
+<!--    <table>-->
+<!--      <tr>-->
+<!--        <td>Ten</td>-->
+<!--        <td><input type="text" formControlName="title"></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>Author</td>-->
+<!--        <td><input type="text" formControlName="author"></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>Mo ta</td>-->
+<!--        <td><input type="text" formControlName="description"></td>-->
+<!--      </tr>-->
+<!--    </table>-->
+<!--    <button type="submit">Edit</button>-->
+<!--    <a [routerLink]="['/books']" >Back to Book list</a>-->
+<!--  </div>-->
+  <div><label>
+    Title
+    <br>
+    <input type="text" formControlName="title">
+  </label>
+  </div>
+  <div *ngIf="bookForm.get('title').invalid && bookForm.get('title').touched">
+    Title is required not null!
+  </div>
+  <div>
+    <label>
+    Author
+    <br>
+    <input type="text" formControlName="author">
+  </label>
+  </div>
+  <div *ngIf="bookForm.get('author').invalid && bookForm.get('author').touched">
+    Title is required not null!
+  </div>
+  <div>
+    <label>
+    Description
+    <br>
+    <input type="text" formControlName="description">
+  </label>
+  </div>
+  <button type="submit">Edit</button>
+</form>
